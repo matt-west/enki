@@ -1,0 +1,567 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+
+/*****************
+  Reset
+*****************/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+/*****************
+  Fonts
+*****************/
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../fonts/League_Gothic-webfont.eot?') format('eot'), url('../fonts/League_Gothic-webfont.woff') format('woff'), url('../fonts/League_Gothic-webfont.ttf') format('truetype');
+}
+
+/*****************
+  Main Styling
+*****************/
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #F8F8F8 url(<%= asset_path 'empire_state.png' %>) no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  color: #595959;
+}
+
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+a,
+a:visited {
+  color: #08C;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.alignRight {
+  float: right;
+  padding: 0 0 35px 35px;
+  max-width: 30%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/*****************
+  Left Panel
+*****************/
+
+section#left {
+  position: fixed;
+  width: 25%;
+  min-width: 300px;
+  height: 100%;
+}
+
+section#left header {
+  padding: 1em;
+  margin: 1.35em;
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+section#left header:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+section#left header h1 {
+  font-weight: 200;
+  font-size: 2em;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  text-transform: uppercase;
+}
+
+section#left header h1 a,
+section#left header h1 a:visited {
+  color: #000;
+}
+
+section#left header h1 a:hover,
+section#left header h1 a:focus {
+  text-decoration: none;
+  color: #595959;
+}
+
+section#left header h2 {
+  font-weight: 200;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+
+section#left header h2 a {
+  color: #595959;
+}
+
+section#left header nav {
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
+section#left header nav h3 {
+  font-weight: 200;
+  margin-bottom: 0.5em;
+}
+
+section#left header nav ul {
+  margin-bottom: 1em;
+}
+
+section#left header nav ul li {
+  padding-bottom: 0.4em;
+  padding-left: 0.8em;
+}
+
+section#left header nav ul li a {
+  color: #212121;
+}
+
+section#left footer {
+  padding: 1em;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+}
+
+section#left footer span {
+  font-size: 0.7em;
+}
+
+/*****************
+  Center Panel
+*****************/
+
+section#center {
+  float: left;
+  width: 55%;
+  margin-left: 25%;
+  min-height: 100%;
+}
+
+section#center article {
+  word-wrap: break-word;
+}
+
+article,
+div#comments {
+  padding: 3.5em;
+  color: #595959;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  -o-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  -ms-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin: 1.5em 0;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+article header a,
+article header a:visited {
+  color: #000;
+}
+
+article header a:hover,
+article header a:focus {
+  text-decoration: none;
+  border-bottom: dotted 1px #000;
+}
+
+article header h1 {
+  font-weight: 200;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+
+article h2,
+article section h1 {
+  font-weight: 200;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  font-size: 1.4em;
+  line-height: 1em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+
+article h3,
+article section h2 {
+  color: #000;
+  margin: 0;
+}
+
+article p {
+  margin: 1em 0;
+  text-align: justify;
+}
+
+article footer {
+  font-size: 0.8em;
+  color: #636363;
+}
+
+article footer a,
+article footer a:visited {
+  color: #636363;
+  border-bottom: dotted 1px #636363;
+}
+
+article footer a:hover,
+article footer a:focus {
+  text-decoration: none;
+  color: #000;
+  border-bottom: dotted 1px #000;
+}
+
+article figure {
+  font-size: 0.7em;
+  padding: 0;
+  margin: 0;
+}
+
+article figure figcaption {
+  padding-top: 1em;
+}
+
+article blockquote {
+  margin-left: 30px;
+  padding-left: 10px;
+  border-left: 4px solid #CCC;
+  line-height: 1.6em;
+  font-size: 1.1em;
+}
+
+.fg-right {
+  float: right;
+  padding: 1em 0 1em 2em;
+}
+
+blockquote {
+  background:#f9f9f9;
+  border-left:10px solid #ccc;
+  margin:1.5em 10px;
+  padding:.5em 10px;
+  quotes:"\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color:#ccc;
+  content:open-quote;
+  font-size:4em;
+  line-height:.1em;
+  margin-right:.25em;
+  vertical-align:-.4em;
+}
+
+blockquote p {
+  display:inline;
+}
+
+/*****************
+  Right Panel
+*****************/
+
+section#right {
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+
+section#right aside {
+  padding: 1em;
+}
+
+section#right h4 {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #999;
+  line-height: 1.3em;
+}
+
+section#right h4 a {
+  color: #636363;
+}
+
+/*****************
+  Social
+*****************/
+
+.tweet-btn {
+  float: left;
+}
+
+.g-plus-one {
+  float: left;
+}
+
+.fb-like {
+  top: -3px;
+}
+
+.fb-like span,
+.fb-like iframe {
+  height: 20px !important;
+}
+
+/**************************
+  Media Queries
+**************************/
+@media only screen and (max-width: 1220px), only screen and (max-device-width: 1220px) {
+  section#left {
+    width: 300px;
+  }
+
+  section#left header h1 {
+    font-size: 2em;
+  }
+
+  section#center {
+    position: absolute;
+    left: 300px;
+    top: 0;
+    right: 0;
+    width: auto;
+    float: none;
+    margin: 0;
+  }
+
+  section#center article {
+    margin: 1.5em 1.5em 1.5em 0;
+  }
+
+  section#right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+  article,
+  div#comments {
+    padding: 2em;
+    font-size: 0.7em;
+  }
+
+  section#left {
+    font-size: 0.8em;
+  }
+
+  .fg-right {
+    float: none;
+  }
+}
+
+
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  body {
+    padding-bottom: 0.8em;
+  }
+
+  section#left {
+    float: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  section#left .recent {
+    display: none;
+  }
+
+  section#left header {
+    margin: 0.8em;
+  }
+
+  section#left header nav h3 {
+    clear: both;
+  }
+
+  section#left header nav {
+    margin-top: 1.5em;
+    text-align: left;
+  }
+
+  section#left header nav ul li {
+    float: left;
+  }
+
+  section#left footer {
+    display: none;
+  }
+
+  section#center {
+    float: none;
+    position: relative;
+    left: 0;
+  }
+
+  section#center article {
+    padding: 1.5em;
+    margin: 0.8em;
+  }
+
+  article {
+    font-size: 1em
+  }
+}
+
+
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+
+
+
+/* CODERAY */
+.CodeRay {
+  background-color: #f8f8f8;
+  border: 1px solid silver;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #100;
+  margin-bottom: 1em;
+}
+.CodeRay pre { margin: 0px; font-size: 12px }
+
+div.CodeRay { }
+
+span.CodeRay { white-space: pre; border: 0px; padding: 2px }
+
+table.CodeRay { border-collapse: collapse; width: 100%; padding: 2px }
+table.CodeRay td { padding: 2px 4px; vertical-align: top }
+
+.CodeRay .line_numbers, .CodeRay .no {
+  background-color: #eaeaea;
+  color: gray;
+  text-align: right;
+}
+.CodeRay .line_numbers tt { font-weight: bold }
+.CodeRay .no { padding: 0px 4px }
+.CodeRay .code { width: 100% }
+
+ol.CodeRay { font-size: 10pt }
+ol.CodeRay li { white-space: pre }
+
+.CodeRay .code pre { overflow: auto }
+.af { color:#00C }
+.an { color:#007 }
+.av { color:#700 }
+.aw { color:#C00 }
+.bi { color:#509; font-weight:bold }
+.c  { color:#888 }
+
+.ch { color:#04D }
+.ch .k { color:#04D }
+.ch .dl { color:#039 }
+
+.cl { color:#B06; font-weight:bold }
+.co { color:#036; font-weight:bold }
+.cr { color:#0A0 }
+.cv { color:#369 }
+.df { color:#099; font-weight:bold }
+.di { color:#088; font-weight:bold }
+.dl { color:black }
+.do { color:#970 }
+.ds { color:#D42; font-weight:bold }
+.e  { color:#666; font-weight:bold }
+.en { color:#800; font-weight:bold }
+.er { color:#F00; background-color:#FAA }
+.ex { color:#F00; font-weight:bold }
+.fl { color:#60E; font-weight:bold }
+.fu { color:#06B; font-weight:bold }
+.gv { color:#d70; font-weight:bold }
+.hx { color:#058; font-weight:bold }
+.i  { color:#00D; font-weight:bold }
+.ic { color:#B44; font-weight:bold }
+
+.il { background: #eee }
+.il .il { background: #ddd }
+.il .il .il { background: #ccc }
+.il .dl { font-weight: bold ! important; color: #888 ! important }
+
+.in { color:#B2B; font-weight:bold }
+.iv { color:#33B }
+.la { color:#970; font-weight:bold }
+.lv { color:#963 }
+.oc { color:#40E; font-weight:bold }
+.on { color:#000; font-weight:bold }
+.op { }
+.pc { color:#038; font-weight:bold }
+.pd { color:#369; font-weight:bold }
+.pp { color:#579 }
+.pt { color:#339; font-weight:bold }
+.r  { color:#080; font-weight:bold }
+
+.rx { background-color:#fff0ff }
+.rx .k { color:#808 }
+.rx .dl { color:#404 }
+.rx .mod { color:#C2C }
+.rx .fu  { color:#404; font-weight: bold }
+
+.s  { background-color:#fff0f0 }
+.s  .s { background-color:#ffe0e0 }
+.s  .s  .s { background-color:#ffd0d0 }
+.s  .k { color:#D20 }
+.s  .dl { color:#710 }
+
+.sh { background-color:#f0fff0 }
+.sh .k { color:#2B2 }
+.sh .dl { color:#161 }
+
+.sy { color:#A60 }
+.sy .k { color:#A60 }
+.sy .dl { color:#630 }
+
+.ta { color:#070 }
+.tf { color:#070; font-weight:bold }
+.ts { color:#D70; font-weight:bold }
+.ty { color:#339; font-weight:bold }
+.v  { color:#036 }
+.xt { color:#444 }
+
