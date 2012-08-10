@@ -7,12 +7,13 @@ default_run_options[:pty] = true
 # default_environment['PATH']='/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin::/root/bin:/bin:/usr/bin:/usr/sbin:/usr/local/bin'
 
 # Add RVM's lib directory to the load path.
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 # Load RVM's capistrano plugin.    
 require "rvm/capistrano"
 
 set :rvm_ruby_string, '1.9.2'
+set :rvm_type, :system
 
 set :repository, "git@github.com:matt-west/enki.git"
 set :deploy_to, "/var/www/vhosts/cs"
