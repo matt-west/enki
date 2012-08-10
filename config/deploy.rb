@@ -44,6 +44,7 @@ namespace :deploy do
 
 	desc "Updates the symlink for config files to the just deployed release."
   task :symlink_configs do
+  	run "cp -f #{shared_path}/config/production.rb #{release_path}/config/environments/production.rb"
   	run "cp -f #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     # run "ln -nfs #{shared_path}/config/newrelic.yml #{release_path}/config/newrelic.yml"
     # run "cp -f #{shared_path}/config/omniauth.rb #{release_path}/config/initializers/omniauth.rb"
