@@ -7,7 +7,7 @@
 	</div>
 	<footer>
 		<p>
-			<time datetime="<%= post.published_at %>">Posted on <%= format_post_date(post.published_at) %></time> - 
+			<time datetime="<%= post.published_at %>">Posted on <%= format_post_date(post.published_at) %></time> - <%= link_to "", "#{post_path(post)}#disqus_thread" %> - 
 			<% unless post.tags.empty? -%>
     		Tagged: <%= linked_tag_list(post.tags) %>
     	<% end -%>
