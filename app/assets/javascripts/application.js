@@ -15,3 +15,12 @@
 //= require common
 //= require live-comment-preview
 //= require_self
+
+$(function() {
+
+	$("#see-nav").click(function(e) {
+		e.preventDefault();
+		
+		$("section#left header nav").toggleClass('show');
+	});
+});

@@ -5,7 +5,7 @@
   <title><%= html_title yield(:page_title) %></title>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
+  <meta name=viewport content="width=device-width; initial-scale=1.0;"/>
 
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'application' %>
@@ -13,59 +13,58 @@
   <%= open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation] %>
   <%= yield(:head) %>
 
+  <link href="http://fonts.googleapis.com/css?family=Niconne" rel="stylesheet" type="text/css">
+
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div id="container" class="clearfix">
-    <!-- LEFT Side -->
-    <section id="left">
-      <header>
-        <hgroup>
-          <h1><a href="/" title="Coding Skyscrapers">Coding Skyscrapers</a></h1>
-          <h2>Written by <a href="https://plus.google.com/103780700566333678292?rel=author" title="Matt West" rel="author">Matt West</a></h2>
-        </hgroup>
+  <!-- LEFT Side -->
+  <section id="left">
+    <header>
+      <hgroup>
+        <h1><a href="/" title="Coding Skyscrapers">Coding Skyscrapers</a></h1>
+        <h2>Written by <a href="https://plus.google.com/103780700566333678292?rel=author" title="Matt West" rel="author">Matt West</a></h2>
+      </hgroup>
 
-        <nav>
-          <h3 class="recent">Recent Posts</h3>
-          <ul class="recent clearfix">
-            <% recent_posts.each do |post| %>
-            <li><%= link_to post.title, post_path(post) %></li>
-            <% end %>
-          </ul>
+      <a href="#" id="see-nav">[Navigation]</a>
 
-          <% unless category_links_for_navigation.empty? -%>
-          <h3>Tags</h3>
-          <ul class="clearfix">
-            <% category_links_for_navigation.each do |link| -%>
-              <li><%= link_to("#"+link.name, link.url) %></li>
-            <% end -%>
-          </ul>
+      <nav>
+        <h3 class="recent">Recent Posts</h3>
+        <ul class="recent clearfix">
+          <% recent_posts.each do |post| %>
+          <li><%= link_to post.title, post_path(post) %></li>
+          <% end %>
+        </ul>
+
+        <% unless category_links_for_navigation.empty? -%>
+        <h3>Tags</h3>
+        <ul class="clearfix">
+          <% category_links_for_navigation.each do |link| -%>
+            <li><%= link_to("#"+link.name, link.url) %></li>
           <% end -%>
+        </ul>
+        <% end -%>
 
 
-          <h3>Pages</h3>
-          <ul class="clearfix">
-            <% page_links_for_navigation.each do |link| -%>
-              <li><%= link_to(link.name, link.url) %></li>
-            <% end -%>
-          </ul>
-        </nav>
-      </header>
-      <footer>
-        <span>&copy; 2012 Matt West. All Rights Reserved</span>
-      </footer>
-    </section>
-    <!-- CENTER -->
-    <section id="center" class="clearfix">
-      <%= yield %>
-    </section>
-    <!-- RIGHT Side -->
-    <section id="right">
-
-    </section>
-  </div>
+        <h3>Pages</h3>
+        <ul class="clearfix">
+          <% page_links_for_navigation.each do |link| -%>
+            <li><%= link_to(link.name, link.url) %></li>
+          <% end -%>
+        </ul>
+      </nav>
+    </header>
+  </section>
+  <!-- CENTER -->
+  <section id="center" class="clearfix">
+    <%= yield %>
+  </section>
+  <footer>
+    <p id="explore">"Explore the Unknowable"</p>
+    <p>&copy; 2012 Matt West. All Rights Reserved</p>
+  </footer>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-12756669-22']);

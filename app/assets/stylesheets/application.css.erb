@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  background: #F8F8F8 url(<%= asset_path 'empire_state.png' %>) no-repeat bottom center fixed;
+  background: #F8F8F8 url(<%= asset_path 'bg.jpeg' %>);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,25 +81,14 @@ strong {
 *****************/
 
 section#left {
-  position: fixed;
   width: 25%;
   min-width: 300px;
   height: 100%;
+  float: left;
 }
 
 section#left header {
-  padding: 1em;
   margin: 1.35em;
-  background: rgba(255, 255, 255, 0.45);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-section#left header:hover {
-  background: rgba(255, 255, 255, 0.75);
 }
 
 section#left header h1 {
@@ -130,9 +119,22 @@ section#left header h2 a {
   color: #595959;
 }
 
+#see-nav {
+  float: right;
+  color: #595959;
+  font-weight: 200;
+  margin-top: -1em;
+  font-size: 0.9em;
+  display: none;
+}
+
 section#left header nav {
   margin-top: 2em;
   font-size: 0.9em;
+}
+
+section#left header nav.show {
+  display: block;
 }
 
 section#left header nav h3 {
@@ -153,14 +155,21 @@ section#left header nav ul li a {
   color: #212121;
 }
 
-section#left footer {
+body > footer {
+  text-align: center;
   padding: 1em;
-  color: #999;
-  position: absolute;
-  bottom: 0;
+  color: rgba(0, 0, 0, 0.3);
+  clear: both;
 }
 
-section#left footer span {
+footer #explore {
+  font-size: 1.2em;
+  padding-bottom: 0.8em;
+  font-family: 'Niconne',cursive;
+  letter-spacing: 1px;
+}
+
+body > footer p {
   font-size: 0.7em;
 }
 
@@ -169,7 +178,6 @@ section#left footer span {
 *****************/
 
 section#center {
-  float: left;
   width: 55%;
   margin-left: 25%;
   min-height: 100%;
@@ -358,13 +366,8 @@ section#right h4 a {
   }
 
   section#center {
-    position: absolute;
-    left: 300px;
-    top: 0;
-    right: 0;
+    margin-left: 300px;
     width: auto;
-    float: none;
-    margin: 0;
   }
 
   section#center article {
@@ -374,26 +377,27 @@ section#right h4 a {
   section#right {
     display: none;
   }
+
+  div#comments {
+    padding: 2em;
+    margin-right: 1.5em;
+  }
 }
 
-@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  #see-nav {
+    display: block;
+  }
+
   article,
   div#comments {
     padding: 2em;
-    font-size: 0.7em;
-  }
-
-  section#left {
-    font-size: 0.8em;
   }
 
   .fg-right {
     float: none;
   }
-}
 
-
-@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
   body {
     padding-bottom: 0.8em;
   }
@@ -403,7 +407,6 @@ section#right h4 a {
     width: 100%;
     height: auto;
     position: relative;
-    text-align: center;
   }
 
   section#left .recent {
@@ -415,12 +418,13 @@ section#right h4 a {
   }
 
   section#left header nav h3 {
-    clear: both;
+    float: left;
   }
 
   section#left header nav {
     margin-top: 1.5em;
     text-align: left;
+    display: none;
   }
 
   section#left header nav ul li {
@@ -433,17 +437,13 @@ section#right h4 a {
 
   section#center {
     float: none;
-    position: relative;
-    left: 0;
+    margin: 0;
   }
 
-  section#center article {
+  section#center article,
+  div#comments {
     padding: 1.5em;
     margin: 0.8em;
-  }
-
-  article {
-    font-size: 1em
   }
 }
 
