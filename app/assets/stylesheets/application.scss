@@ -122,8 +122,9 @@ section#left header h2 a {
   color: #BABABA;
   font-weight: 200;
   margin-top: -1em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: none;
+  letter-spacing: 1px;
 }
 
 section#left header nav {
@@ -361,17 +362,61 @@ blockquote p {
 /**************************
   Media Queries
 **************************/
-@media only screen and (max-width: 1220px), only screen and (max-device-width: 1220px) {
+@media only screen and (max-width: 1000px), only screen and (max-device-width: 1000px) {
+  section#left {
+    width: 220px;
+  }
 
+  section#left header h1 {
+    font-size: 1.4em;
+  }
+
+  section#center {
+    margin-left: 220px;
+  }
+
+  body > footer {
+    width: 220px;
+  }
 }
 
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   #see-nav {
     display: block;
   }
+
   .fg-right {
     float: none;
     padding-left: 0;
+  }
+
+  section#left {
+    width: auto;
+    float: none;
+  }
+
+  section#center {
+    width: auto;
+    margin: 0;
+    float: none;
+    padding: 1.35em;
+  }
+
+  section#center article {
+    max-width: none;
+
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  section#left header nav {
+    display: none;
+  }
+
+  body > footer {
+    position: relative;
+    width: auto;
   }
 
   
