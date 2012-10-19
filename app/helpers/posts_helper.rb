@@ -6,6 +6,6 @@ module PostsHelper
   end
 
   def recent_posts
-  	Post.order('published_at DESC').limit(5)
+  	Post.where("published_at < '#{Time.now}'").order('published_at DESC').limit(5)
   end
 end
