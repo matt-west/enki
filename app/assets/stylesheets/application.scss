@@ -78,6 +78,7 @@ strong {
 
 section#left {
   width: 270px;
+  padding-bottom: 77px;
   float: left;
 }
 
@@ -395,6 +396,7 @@ blockquote p {
   section#left {
     width: auto;
     float: none;
+    padding-bottom: 0;
   }
 
   section#left header {
