@@ -35,9 +35,9 @@ body {
 }
 
 body {
-  background: #222;
+  background: #FFF;
   font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
-  color: #212121;
+  color: #4D4D4D;
   position: relative;
 }
 
@@ -79,12 +79,10 @@ strong {
 section#left {
   width: 270px;
   float: left;
-  color: #BABABA;
-  text-shadow: 0 1px 3px black;
 }
 
 section#left header {
-  margin: 1.35em;
+  margin: 1.35em 0 1.35em 1.35em;
 }
 
 section#left header h1 {
@@ -96,7 +94,7 @@ section#left header h1 {
 
 section#left header h1 a,
 section#left header h1 a:visited {
-  color: #BABABA;
+  color: #000;
 }
 
 section#left header h1 a:hover,
@@ -106,10 +104,9 @@ section#left header h1 a:focus {
 }
 
 section#left header h2 {
-  font-weight: 200;
   margin-top: 0.5em;
-  font-size: 0.8em;
-  color: #595959;
+  font-size: 0.75em;
+  color: #585C60;
   letter-spacing: 1px;
 }
 
@@ -121,15 +118,23 @@ section#left header h2 a {
   float: right;
   color: #BABABA;
   font-weight: 200;
-  margin-top: -1em;
+  margin-top: 1.2em;
   font-size: 0.8em;
   display: none;
   letter-spacing: 1px;
 }
 
+.rnav-bar {
+  display: block;
+  background: #BABABA;
+  width: 18px;
+  height: 3px;
+  margin: 0 0 3px 0;
+  border-radius: 3px;
+}
+
 section#left header nav {
   margin-top: 2em;
-  font-size: 0.9em;
 }
 
 section#left header nav.show {
@@ -137,25 +142,28 @@ section#left header nav.show {
 }
 
 section#left header nav h3 {
-  font-weight: 200;
-  margin-bottom: 0.8em;
-  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #E6E6E6;
   letter-spacing: 1px;
-  font-size: 0.7em;
-  color: #595959;
+  font-size: 0.8em;
+  color: #585C60;
 }
 
 section#left header nav ul {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  margin-right: 1.35em;
+  font-size: 0.9em;
 }
 
 section#left header nav ul li {
   padding-bottom: 0.4em;
-  padding-left: 0.8em;
+  padding-left: 0;
+  line-height: 1.3em;
 }
 
 section#left header nav ul li a {
-  color: #BABABA;
+  color: #4D4D4D;
 }
 
 section#left header nav ul li a:hover,
@@ -167,8 +175,8 @@ section#left header nav ul li a:focus {
 body > footer {
   text-align: center;
   padding: 1em 0;
-  color: rgba(0, 0, 0, 0.3);
-  text-shadow: -1px 0 1px rgba(255,255,255,0.1);
+  //color: rgba(0, 0, 0, 0.3);
+  //text-shadow: -1px 0 1px rgba(255,255,255,0.1);
   position: absolute;
   width: 270px;
   bottom: 0;
@@ -180,6 +188,7 @@ body > footer p#explore {
   padding-bottom: 0.8em;
   font-family: 'Niconne',cursive;
   letter-spacing: 1px;
+  color: #BABABA;
 }
 
 body > footer p {
@@ -194,13 +203,9 @@ section#center {
   width: auto;
   margin-left: 270px;
   min-height: 100%;
-  padding: 4em;
+  padding: 0;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  -o-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  -ms-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-left: 1px solid #E6E6E6;
 }
 
 section#center article {
@@ -208,16 +213,13 @@ section#center article {
 }
 
 article {
-  margin: 0 auto;
-  padding: 4em 0;
-  border-top: 1px solid #EEE;
-  color: #212121;
+  padding: 5em;
+  border-top: 1px solid #E6E6E6;
   font-size: 0.9em;
   line-height: 1.5em;
   max-width: 600px;
 
   &:first-child {
-    padding-top: 0;
     border: 0;
   }
 
@@ -233,7 +235,7 @@ article {
       &:hover,
       &:focus {
         text-decoration: none;
-        border-bottom: dotted 1px #000;
+        border-bottom: solid 3px #000;
       }
     }
 
@@ -395,15 +397,21 @@ blockquote p {
     float: none;
   }
 
+  section#left header {
+    margin: 1.35em;
+  }
+
   section#center {
+    border-top: 1px solid #E6E6E6;
     width: auto;
     margin: 0;
     float: none;
-    padding: 1.35em;
   }
 
   section#center article {
     max-width: none;
+    padding: 1.35em;
+    margin: 0;
 
     h1 {
       font-size: 1.8em;
