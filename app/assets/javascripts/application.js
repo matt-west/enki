@@ -21,6 +21,6 @@ $(function() {
 	$("#see-nav").click(function(e) {
 		e.preventDefault();
 		
-		$("section#left header nav").toggleClass('show');
+		$("nav").toggleClass('show');
 	});
 });

@@ -25,7 +25,7 @@
 </head>
 <body>
   <!-- LEFT Side -->
-  <section id="left">
+  <div id="left">
     <header>
       <a href="#" id="see-nav">
         <i class="rnav-bar"></i>
@@ -38,6 +38,9 @@
         <h2>Written by <a href="https://plus.google.com/103780700566333678292?rel=author" title="Matt West" rel="author">Matt West</a></h2>
       </hgroup>
 
+    </header>
+
+    <section>
       <nav>
         <h3 class="recent">Recent Posts</h3>
         <ul class="recent clearfix">
@@ -63,12 +66,12 @@
           <% end -%>
         </ul>
       </nav>
-    </header>
-  </section>
+    </section>
+  </div>
   <!-- CENTER -->
-  <section id="center" class="clearfix">
+  <div id="center" class="clearfix">
     <%= yield %>
-  </section>
+  </div>
   <footer>
     <p id="explore">"Explore the Unknowable"</p>
     <p>&copy; 2012 Matt West. All Rights Reserved</p>

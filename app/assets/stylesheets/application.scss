@@ -81,43 +81,44 @@ em {
   Left Panel
 *****************/
 
-section#left {
+div#left {
   width: 270px;
   padding-bottom: 77px;
   float: left;
 }
 
-section#left header {
+div#left header {
   margin: 1.35em 0 1.35em 1.35em;
-}
 
-section#left header h1 {
-  font-weight: 200;
-  font-size: 2em;
-  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
-  text-transform: uppercase;
-}
 
-section#left header h1 a,
-section#left header h1 a:visited {
-  color: #000;
-}
+  h1 {
+    font-weight: 200;
+    font-size: 2em;
+    font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+    text-transform: uppercase;
+  }
 
-section#left header h1 a:hover,
-section#left header h1 a:focus {
-  text-decoration: none;
-  color: #08C;
-}
+  h1 a,
+  a:visited {
+    color: #000;
+  }
 
-section#left header h2 {
-  margin-top: 0.5em;
-  font-size: 0.75em;
-  color: #585C60;
-  letter-spacing: 1px;
-}
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: #08C;
+  }
 
-section#left header h2 a {
-  color: #595959;
+  h2 {
+    margin-top: 0.5em;
+    font-size: 0.75em;
+    color: #585C60;
+    letter-spacing: 1px;
+  }
+
+  a {
+    color: #595959;
+  }
 }
 
 #see-nav {
@@ -130,6 +131,7 @@ section#left header h2 a {
   letter-spacing: 1px;
 }
 
+
 .rnav-bar {
   display: block;
   background: #BABABA;
@@ -139,43 +141,48 @@ section#left header h2 a {
   border-radius: 3px;
 }
 
-section#left header nav {
-  margin-top: 2em;
-}
+div#left section nav {
+  margin: 2em 0 1.35em 1.35em;
 
-section#left header nav.show {
-  display: block;
-}
+  &.show {
+    display: block;
+  }
 
-section#left header nav h3 {
-  margin-bottom: 0.5em;
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid #E6E6E6;
-  letter-spacing: 1px;
-  font-size: 0.8em;
-  color: #585C60;
-}
+  h3 {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid #E6E6E6;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    color: #585C60;
+  }
 
-section#left header nav ul {
-  margin-bottom: 2em;
-  margin-right: 1.35em;
-  font-size: 0.9em;
-}
+  ul {
+    margin-bottom: 2em;
+    margin-right: 1.35em;
+    font-size: 0.9em;
 
-section#left header nav ul li {
-  padding-bottom: 0.4em;
-  padding-left: 0;
-  line-height: 1.3em;
-}
 
-section#left header nav ul li a {
-  color: #4D4D4D;
-}
+    li {
+      padding-bottom: 0.4em;
+      padding-left: 0;
+      line-height: 1.3em;
 
-section#left header nav ul li a:hover,
-section#left header nav ul li a:focus {
-  color: #08C;
-  text-decoration: none;
+      a {
+        color: #4D4D4D;
+
+        &:visited {
+          color: #4D4D4D;
+        }
+
+        &:hover,
+        &:focus {
+          color: #08C;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 body > footer {
@@ -205,7 +212,7 @@ body > footer p {
   Center Panel
 *****************/
 
-section#center {
+div#center {
   width: auto;
   margin-left: 270px;
   min-height: 100%;
@@ -214,7 +221,7 @@ section#center {
   border-left: 1px solid #E6E6E6;
 }
 
-section#center article {
+div#center article {
   word-wrap: break-word;
 }
 
@@ -390,15 +397,15 @@ blockquote p {
   Media Queries
 **************************/
 @media only screen and (max-width: 1000px), only screen and (max-device-width: 1000px) {
-  section#left {
+  div#left {
     width: 220px;
   }
 
-  section#left header h1 {
+  div#left header h1 {
     font-size: 1.4em;
   }
 
-  section#center {
+  div#center {
     margin-left: 220px;
   }
 
@@ -417,24 +424,24 @@ blockquote p {
     padding-left: 0;
   }
 
-  section#left {
+  div#left {
     width: auto;
     float: none;
     padding-bottom: 0;
   }
 
-  section#left header {
+  div#left header {
     margin: 1.35em;
   }
 
-  section#center {
+  div#center {
     border-top: 1px solid #E6E6E6;
     width: auto;
     margin: 0;
     float: none;
   }
 
-  section#center article {
+  div#center article {
     max-width: none;
     padding: 1.35em;
     margin: 0;
@@ -444,7 +451,7 @@ blockquote p {
     }
   }
 
-  section#left header nav {
+  div#left nav {
     display: none;
   }
 
