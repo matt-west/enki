@@ -1,13 +1,14 @@
 <article>
 	<header>
 		<h1><%= link_to post.title, post_path(post) %></h1>
+		<time datetime="<%= post.published_at %>">Posted on <%= format_post_date(post.published_at) %></time>
 	</header>
 	<div>
 		<%=raw post.body_html %>
 	</div>
 	<footer>
 		<p>
-			<time datetime="<%= post.published_at %>">Posted on <%= format_post_date(post.published_at) %></time> - <%= link_to "", "#{post_path(post)}#disqus_thread" %> - 
+			<%= link_to "", "#{post_path(post)}#disqus_thread" %> - 
 			<% unless post.tags.empty? -%>
     		Tagged: <%= linked_tag_list(post.tags) %>
     	<% end -%>

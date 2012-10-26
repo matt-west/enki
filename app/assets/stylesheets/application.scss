@@ -38,6 +38,7 @@ body {
   background: #FFF;
   font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
   color: #4D4D4D;
+  //color: rgba(0,0,0,0.7);
   position: relative;
 }
 
@@ -218,7 +219,7 @@ section#center article {
 }
 
 article {
-  padding: 5em;
+  padding: 7.5em;
   border-top: 1px solid #E6E6E6;
   font-size: 0.9em;
   line-height: 1.5em;
@@ -229,6 +230,7 @@ article {
   }
 
   header {
+    margin-bottom: 2.75em;
 
     a {
       color: #000;
@@ -249,9 +251,17 @@ article {
       font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
       font-size: 2.5em;
       line-height: 1.2em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
       color: #000;
     }
+
+    time {
+      color: rgba(0,0,0,0.3);
+    }
+  }
+
+  > div {
+    margin-bottom: 3em;
   }
 
   div h1 {
@@ -289,15 +299,15 @@ article {
 
   footer {
     font-size: 0.8em;
-    color: #636363;
+    color: rgba(0,0,0,0.3);
 
     a {
-      color: #636363;
-      border-bottom: dotted 1px #636363;
+      color: rgba(0,0,0,0.3);
+      border-bottom: dotted 1px rgba(0,0,0,0.3);
 
       &:visited {
-        color: #636363;
-        border-bottom: dotted 1px #636363;
+        color: rgba(0,0,0,0.3);
+        border-bottom: dotted 1px rgba(0,0,0,0.3);
       }
 
       &:hover,
