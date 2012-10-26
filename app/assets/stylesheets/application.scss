@@ -72,6 +72,10 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-style: italic;
+}
+
 /*****************
   Left Panel
 *****************/
@@ -248,6 +252,16 @@ article {
       margin-bottom: 0.5em;
       color: #000;
     }
+  }
+
+  h1 {
+    font-weight: 200;
+    font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: black;
   }
 
   h2,
