@@ -11,7 +11,8 @@
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
   <%= open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation] %>
-  <%= yield(:head) %>
+
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/codingskyscrapers" title="Coding Skyscrapers RSS" />  
 
   <link href="http://fonts.googleapis.com/css?family=Niconne" rel="stylesheet" type="text/css">
 
