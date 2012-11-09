@@ -88,7 +88,14 @@ div#left {
 }
 
 div#left header {
-  margin: 1.35em 0 1.35em 1.35em;
+  margin: 0;
+  padding: 1.35em;
+  background-color: black;
+  background-image: -webkit-gradient(linear,0% 0,0% 100%,from(#2E2E2E),to(black));
+  background-image: -webkit-linear-gradient(top,#2E2E2E,black);
+  background-image: -moz-linear-gradient(top,black,#2E2E2E);
+  background-image: -ms-linear-gradient(top,black,#2E2E2E);
+  background-image: -o-linear-gradient(top,#2E2E2E,black);
 
 
   h1 {
@@ -100,7 +107,7 @@ div#left header {
 
   h1 a,
   a:visited {
-    color: #000;
+    color: #FFF;
   }
 
   a:hover,
@@ -112,12 +119,12 @@ div#left header {
   h2 {
     margin-top: 0.5em;
     font-size: 0.75em;
-    color: #585C60;
+    color: #636363;
     letter-spacing: 1px;
   }
 
   a {
-    color: #595959;
+    color: #636363;
   }
 }
 
@@ -149,16 +156,17 @@ div#left section nav {
   }
 
   h3 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     padding-bottom: 0.25em;
-    border-bottom: 1px solid #E6E6E6;
     letter-spacing: 1px;
-    font-size: 0.8em;
-    color: #585C60;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
   }
 
   ul {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     margin-right: 1.35em;
     font-size: 0.9em;
 
@@ -166,7 +174,7 @@ div#left section nav {
     li {
       padding-bottom: 0.4em;
       padding-left: 0;
-      line-height: 1.3em;
+      line-height: 1.4em;
 
       a {
         color: #4D4D4D;
@@ -180,6 +188,12 @@ div#left section nav {
           color: #08C;
           text-decoration: none;
         }
+      }
+    }
+
+    &.recent {
+      li {
+        padding-bottom: 0.8em;
       }
     }
   }
@@ -226,11 +240,12 @@ div#center article {
 }
 
 article {
-  padding: 7.5em;
+  padding: 5em;
   border-top: 1px solid #E6E6E6;
   font-size: 0.9em;
   line-height: 1.5em;
   max-width: 600px;
+  margin: 0 auto;
 
   &:first-child {
     border: 0;
@@ -249,7 +264,7 @@ article {
       &:hover,
       &:focus {
         text-decoration: none;
-        border-bottom: solid 3px #000;
+        color: #08C;
       }
     }
 
@@ -257,7 +272,7 @@ article {
       font-weight: 200;
       font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
       font-size: 2.5em;
-      line-height: 1.2em;
+      line-height: 1.3em;
       margin-bottom: 0.3em;
       color: #000;
     }
@@ -431,7 +446,8 @@ blockquote p {
   }
 
   div#left header {
-    margin: 1.35em;
+    //margin: 1.35em;
+    padding: 1em;
   }
 
   div#center {
@@ -443,11 +459,15 @@ blockquote p {
 
   div#center article {
     max-width: none;
-    padding: 1.35em;
+    padding: 2em 1em;
     margin: 0;
 
     h1 {
       font-size: 1.8em;
+    }
+
+    header {
+      margin-bottom: 2em;
     }
   }
 
