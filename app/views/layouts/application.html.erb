@@ -64,13 +64,27 @@
         </ul>
         <% end -%>
 
-
         <h3>Pages</h3>
         <ul class="clearfix">
           <% page_links_for_navigation.each do |link| -%>
             <li><%= link_to(link.name, link.url) %></li>
           <% end -%>
         </ul>
+
+        <div id="book-promo">
+          <h3>I Wrote a Book!</h3>
+          <p>
+            <a href="http://html5foundations.com" title="HTML5 Foundations by Matt West" target="_blank">
+              <img src="/assets/html5foundations_cover.png" alt="HTML5 Foundations Book Cover">
+            </a>
+          </p>
+          <p>
+            Learn how to build websites using the latest web technologies.
+          </p>
+          <p>
+             <a href="http://html5foundations.com" title="Buy HTML5 Foundations" target="_blank">Buy HTML5 Foundations</a>
+          </p>
+        </div>
       </nav>
     </section>
   </div>

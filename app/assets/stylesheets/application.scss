@@ -222,6 +222,21 @@ body > footer p {
   font-size: 0.7em;
 }
 
+#book-promo {
+  margin-right: 1.35em;
+  font-size: 0.9em;
+
+  p {
+    margin: 1em 0;
+    line-height: 1.4em;
+  }
+
+  a {
+    color: #4D4D4D;
+    font-weight: bold;
+  }
+}
+
 /*****************
   Center Panel
 *****************/
@@ -448,6 +463,10 @@ blockquote p {
   div#left header {
     //margin: 1.35em;
     padding: 1em;
+  }
+
+  #book-promo {
+    margin-right: 1em;
   }
 
   div#center {
