@@ -48,6 +48,21 @@
 
     <section>
       <nav>
+        <div id="book-promo">
+          <h3>I Wrote a Book!</h3>
+          <p>
+            <a href="http://www.amazon.co.uk/gp/product/1118356551/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1118356551&linkCode=as2&tag=codingskyscr-21" title="HTML5 Foundations by Matt West" target="_blank">
+              <img src="/assets/html5foundations_cover.png" alt="HTML5 Foundations Book Cover">
+            </a>
+          </p>
+          <p>
+            Learn how to build websites using the latest web technologies.
+          </p>
+          <p>
+             <a href="http://www.amazon.co.uk/gp/product/1118356551/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1118356551&linkCode=as2&tag=codingskyscr-21" title="Buy HTML5 Foundations by Matt West" class="buy-book" target="_blank">Buy HTML5 Foundations</a>
+          </p>
+        </div>
+
         <h3 class="recent">Recent Posts</h3>
         <ul class="recent clearfix">
           <% recent_posts.each do |post| %>
@@ -70,21 +85,6 @@
             <li><%= link_to(link.name, link.url) %></li>
           <% end -%>
         </ul>
-
-        <div id="book-promo">
-          <h3>I Wrote a Book!</h3>
-          <p>
-            <a href="http://html5foundations.com" title="HTML5 Foundations by Matt West" target="_blank">
-              <img src="/assets/html5foundations_cover.png" alt="HTML5 Foundations Book Cover">
-            </a>
-          </p>
-          <p>
-            Learn how to build websites using the latest web technologies.
-          </p>
-          <p>
-             <a href="http://html5foundations.com" title="Buy HTML5 Foundations" target="_blank">Buy HTML5 Foundations</a>
-          </p>
-        </div>
       </nav>
     </section>
   </div>

@@ -32,6 +32,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -228,6 +229,7 @@ body > footer p {
 
 #book-promo {
   margin-right: 1.35em;
+  margin-bottom: 3em;
   font-size: 0.9em;
 
   p {
@@ -235,9 +237,16 @@ body > footer p {
     line-height: 1.4em;
   }
 
-  a {
-    color: #4D4D4D;
-    font-weight: bold;
+  a.buy-book {
+    color: #000;
+    border-bottom: 1px dotted #000;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #08C;
+      border-color: #08C;
+    }
   }
 }
 
@@ -409,6 +418,11 @@ blockquote p {
 /*****************
   Social
 *****************/
+
+.twitter-follow {
+  float: left;
+  margin-right: 30px;
+}
 
 .tweet-btn {
   float: left;
