@@ -55,7 +55,8 @@ embed, object {
 
 a,
 a:visited {
-  color: #08C;
+  // color: #08C;
+  color: #ff6600;
   text-decoration: none;
 }
 
@@ -190,7 +191,7 @@ div#left section nav {
 
         &:hover,
         &:focus {
-          color: #08C;
+          color: #ff6600;
           text-decoration: none;
         }
       }
