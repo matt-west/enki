@@ -6,7 +6,7 @@ module ApplicationHelper
     elsif @page
       @page.title
     elsif @tag
-      @tag.capitalize
+      "Thoughts on #{@tag.capitalize}"
     elsif @months
       'The Archives'
     else
@@ -20,7 +20,7 @@ module ApplicationHelper
     elsif @page
       @page.sub_title
     elsif @tag
-      'Tagged Articles'
+      pluralize(@posts.count, 'Article')
     elsif @months
       'Articles from times gone by'
     else
