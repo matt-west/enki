@@ -280,6 +280,136 @@ img.feature
 noscript
 	text-align: center
 
+
+// Books
+#featured-book
+	padding: 2em 1em
+	border-top: 1px solid #EEE
+
+	.book-image
+		float: left
+		width: 250px
+		line-height: 0
+
+		img
+			width: 100%
+
+		a
+			display: block
+
+	.book-info
+		margin-left: 300px
+
+		h2
+			text-align: left
+			margin-top: 0.35em
+			margin-bottom: 0
+			color: black
+
+		.description
+			line-height: 1.4em
+
+		.author
+			margin-top: 0em
+
+		.book-buy
+			font-family: "proxima-nova",sans-serif
+
+			a,
+			a:visited
+				display: block
+				float: left
+				padding: 0.2em 0.75em
+				color: white
+				background: #82A44D
+				text-transform: uppercase
+				font-size: 0.8em
+				letter-spacing: 1px
+				border-radius: 5px
+
+				&:hover,
+				&:focus
+					text-decoration: none
+					background: #718f43
+
+				&:active
+					background: #67823d
+
+
+#recommended-books
+
+	h3
+		//border-bottom: 1px solid #EEE
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+		li
+			border-top: 1px solid #EEE
+			padding: 1.5em 1em
+
+			.book-image
+				float: left
+				width: 80px
+				line-height: 0
+
+				img
+					width: 100%
+
+			.book-info
+				margin-left: 100px
+				padding-top: 0.4em
+
+			.book-title
+				font-size: 1.5em
+				font-family: "proxima-nova",sans-serif
+
+				a,
+				a:visited
+					display: block
+					color: #4D4D4D
+					width: 560px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+
+					&:hover,
+					&:focus
+						text-decoration: none
+						color: $link-color
+
+			.book-author
+				font-size: 0.9em
+				margin-top: 0.25em
+
+			.book-buy
+				font-size: 0.8em
+				margin-top: 0.65em
+				font-family: "proxima-nova",sans-serif
+
+				a,
+				a:visited
+					display: block
+					float: left
+					line-height: 0.8em
+					padding: 0.75em 0.75em
+					color: white
+					background: #82A44D
+					text-transform: uppercase
+					font-size: 0.8em
+					letter-spacing: 1px
+					border-radius: 5px
+
+					&:hover,
+					&:focus
+						text-decoration: none
+						background: #718f43
+
+					&:active
+						background: #67823d
+
 // Clearfix
 .clearfix
 	*zoom: 1

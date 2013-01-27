@@ -18,7 +18,7 @@ module ApplicationHelper
     if @post
       "Published on the #{@post.published_at.day.ordinalize} day of #{@post.published_at.strftime('%B')}, #{@post.published_at.year}"
     elsif @page
-      ''
+      @page.sub_title
     elsif @tag
       'Tagged Articles'
     elsif @months
