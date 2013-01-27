@@ -1,0 +1,291 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize.css
+ *= require_self
+ */
+
+
+// Variables
+$link-color: #08C
+
+
+// Main Styling
+body
+	-webkit-font-smoothing: antialiased
+	color: #545454
+	font-family: "proxima-nova",sans-serif
+	border-top: 5px solid black
+
+a,
+a:visited
+	color: $link-color
+	text-decoration: none
+
+	&:hover,
+	&:focus
+		text-decoration: underline
+
+blockquote
+	margin: 0 2em
+	font-style: italic
+
+h1
+	font-family: "chaparral-pro",sans-serif
+	color: #212121
+	font-weight: normal
+	font-size: 5em
+
+h2
+	font-weight: normal
+	font-size: 2em
+
+img
+	max-width: 100%
+
+img.alignRight
+	float: right
+	padding: 0 0 35px 35px
+	max-width: 30%
+
+img.alignLeft
+	float: left
+	padding: 0 35px 35px 0
+	max-width: 30%
+
+strong
+	font-weight: bold
+
+em
+	font-style: italic
+
+#page-wrapper
+	width: 1200px
+
+#main
+	width: 700px
+
+#page-wrapper,
+#footer-wrapper,
+#main
+	max-width: 100%
+	margin: 0 auto
+	padding: 0 1em
+
+
+// Navigation
+nav
+	text-align: center
+	//font-family: "chaparral-pro",sans-serif
+	margin-top: -5px
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+		li
+			display: inline-block
+
+			a,
+			a:visited
+				display: block
+				color: #545454
+				text-decoration: none
+				padding: 0.8em 0.8em 0
+				margin: 0 0.8em
+				border-top: 5px solid black
+
+				&:hover,
+				&:focus,
+				&.current
+					text-decoration: none
+					color: $link-color
+					border-color: $link-color
+
+
+// Masthead
+#masthead
+	margin: 8em 0
+	text-align: center
+	font-family: "chaparral-pro",sans-serif
+
+	#logo
+		margin-bottom: 1em
+		display: none
+
+		img
+			max-width: 120px
+
+	p
+		color: #4D4D4D
+		font-size: 1.2em
+		line-height: 1em
+		font-style: italic
+
+
+// Home Posts
+#posts-list
+	margin: 0
+	padding: 0
+	list-style: none
+
+	li.post-list-item
+		border-top: 1px solid #EEE
+		padding: 2em 0.5em
+
+		.post-list-date
+			float: left
+			width: 40px
+			margin-right: 14px
+			text-align: center
+			color: #BABABA
+
+			.pld-day
+				font-size: 1.4em
+				line-height: 1.4em
+
+			.pld-month
+				font-size: 0.9em
+				line-height: 0.9em
+				text-transform: uppercase
+
+
+		.post-list-title
+			margin-left: 54px
+			
+			a,
+			a:visited
+				display: block
+				width: 620px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				color: #4D4D4D
+				line-height: 1.5em
+
+				&:hover,
+				&:focus
+					text-decoration: none
+					color: $link-color
+
+
+// Footer
+footer
+	background: #212121
+	color: white
+	font-size: 0.9em
+
+	h3
+		font-weight: bold
+		margin-bottom: 0.9em
+		font-size: 0.9em
+		text-transform: uppercase
+
+	#footer-wrapper
+		padding: 4em 1em 2em
+		max-width: 700px
+
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+
+	#bio
+		margin-bottom: 4em
+
+	#tags
+		margin-bottom: 4em
+
+		li
+			display: inline-block
+			margin: 0 0.25em 0.5em 0
+
+		a,
+		a:visited
+			display: block
+			padding: 0.2em 0.4em
+			background: rgba(0,0,0,0.5)
+			color: white
+			-webkit-border-radius: 5px
+			-moz-border-radius: 5px
+			-o-border-radius: 5px
+			border-radius: 5px
+
+			&:hover,
+			&:focus
+				text-decoration: none
+				background: $link-color
+
+	#legal
+		margin-top: 1em
+
+		a,
+		a:visited
+			color: white
+
+			&:hover,
+			&:focus
+				color: $link-color
+				text-decoration: none
+
+
+// Post
+img.feature
+	width: 100%
+
+#post
+
+#post-content
+	font-family: "chaparral-pro",sans-serif
+	font-size: 1.2em
+	text-align: justify
+	line-height: 1.6em
+
+	h2
+		line-height: 1.2em
+		text-align: center
+
+	p
+		margin: 1.2em 0
+
+#post-meta
+	color: #BABABA
+	font-size: 0.9em
+	margin: 5em 0 10em
+	text-align: center
+	line-height: 1.8em
+
+	a,
+	a:visited
+		color: #BABABA
+		border-bottom: 1px dotted #BABABA
+
+		&:hover,
+		&:focus
+			color: $link-color
+			border-color: $link-color
+			text-decoration: none
+
+noscript
+	text-align: center
+
+// Clearfix
+.clearfix
+	*zoom: 1
+
+.clearfix:before,
+.clearfix:after
+	display: table
+	line-height: 0
+	content: ""
+
+.clearfix:after
+	clear: both

@@ -3,17 +3,17 @@
 <%= auto_discovery_link_tag(:atom, @tag.nil? ? formatted_posts_path(:format => 'atom') : posts_path(:tag => @tag, :format => 'atom')) %>
 <% end -%>
 
-<% if @posts.empty? -%>
-<article>
-	<p>There are no posts yet.</p>
-</article>
-<% else -%>
+<ul id="posts-list">
 	<% @posts.each do |post| -%>
-		<%= render :partial => 'post', :locals => {:post => post} %>
+		<li class="post-list-item clearfix">
+			<div class="post-list-date">
+				<div class="pld-day"><%= post.published_at.day %></div>
+				<div class="pld-month"><%= post.published_at.strftime('%b') %></div>
+			</div>
+			<div class="post-list-title">
+				<h2><%= link_to post.title, post_path(post) %></h2>
+			</div>
+		</li>
 	<% end -%>
-  <% if more_content? -%>
-  	<article>
-	    <div class="related">Looking for more? Head on over to the <%= link_to("archives", archives_path) %>.</div>
-	  </article>
-  <% end -%>
-<% end -%>
+</ul>
+

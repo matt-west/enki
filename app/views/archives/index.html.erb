@@ -1,21 +1,20 @@
 <% content_for(:page_title) do %><%= archives_title %><% end -%>
-<article>
-	<header>
-		<h1>Archives</h1>
-	</header>
 
-<% if @months.empty? -%>
-	<p>Once posts are added they will start to appear in this archive.</p>
-<% else -%>
+<div id="post">
+	<div id="post-content">
+	<% if @months.empty? -%>
+		<p>Once posts are added they will start to appear in this archive.</p>
+	<% else -%>
 
-	<% @months.each do |month| -%>
-	<h3><%= format_month(month.date) %></h3>
-	<ul class='archive-month'>
-	  <% month.posts.each do |post| -%>
-	    <li><%= link_to(post.title, post_path(post)) %><% unless post.tags.empty? %> <span class='tags'>(<%= linked_tag_list(post.tags) %>)</span><% end -%></li>
-	  <% end -%>
-	</ul>
+		<% @months.each do |month| -%>
+		<h3><%= format_month(month.date) %></h3>
+		<ul class='archive-month'>
+		  <% month.posts.each do |post| -%>
+		    <li><%= link_to(post.title, post_path(post)) %></li>
+		  <% end -%>
+		</ul>
+		<% end -%>
+
 	<% end -%>
-
-<% end -%>
-</article>
+	</div>
+</div>

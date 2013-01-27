@@ -1,4 +1,33 @@
 module ApplicationHelper
+
+  def title
+    if @post
+      @post.title
+    elsif @page
+      @page.title
+    elsif @tag
+      @tag.capitalize
+    elsif @months
+      'The Archives'
+    else
+      'Coding Skyscrapers'
+    end
+  end
+
+  def sub_title
+    if @post
+      "Published on the #{@post.published_at.day.ordinalize} day of #{@post.published_at.strftime('%B')}, #{@post.published_at.year}"
+    elsif @page
+      ''
+    elsif @tag
+      'Tagged Articles'
+    elsif @months
+      'Articles from times gone by'
+    else
+      'Thoughts on the business of the internet by <a href="/pages/about" title="About Matt West">Matt West</a>'
+    end
+  end
+
   def author
     Struct.new(:name, :email).new(enki_config[:author][:name], enki_config[:author][:email])
   end
