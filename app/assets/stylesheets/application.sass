@@ -23,6 +23,8 @@ body
 	color: #545454
 	font-family: "proxima-nova",sans-serif
 	border-top: 5px solid black
+	width: 100%
+	overflow-x: hidden
 
 a,
 a:visited
@@ -67,15 +69,14 @@ em
 	font-style: italic
 
 #page-wrapper
-	width: 1200px
+	max-width: 1200px
 
 #main
-	width: 700px
+	max-width: 700px
 
 #page-wrapper,
 #footer-wrapper,
 #main
-	max-width: 100%
 	margin: 0 auto
 	padding: 0 1em
 
@@ -164,7 +165,7 @@ nav
 			a,
 			a:visited
 				display: block
-				width: 620px
+				width: auto
 				white-space: nowrap
 				overflow: hidden
 				text-overflow: ellipsis
@@ -370,7 +371,7 @@ noscript
 				a:visited
 					display: block
 					color: #4D4D4D
-					width: 560px
+					width: auto
 					white-space: nowrap
 					overflow: hidden
 					text-overflow: ellipsis
@@ -428,3 +429,65 @@ noscript
 
 .clearfix:after
 	clear: both
+
+@media only screen and (max-width: 780px), only screen and (max-device-width: 780px)
+	h1
+		font-size: 4em
+
+
+@media only screen and (max-width: 680px), only screen and (max-device-width: 680px)
+	#featured-book
+		padding: 1em 0.5em
+
+		.book-image
+			width: 100%
+			float: none
+		.book-info
+			margin: 0
+
+	#recommended-books ul li
+		padding: 0.8em 0.5em
+
+		.book-title
+			font-size: 1.2em
+
+		.book-author
+			font-size: 0.8em
+			line-height: 1.1em
+
+
+
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px)
+	#page-wrapper,
+	#footer-wrapper,
+	#main
+		padding: 0 0.5em
+
+	nav ul li a, nav ul li a:visited
+		margin: 0
+		padding: 0.8em 0.3em 0
+
+	h1
+		font-size: 2em
+
+	h2
+		font-size: 1.4em
+
+	#masthead
+		margin: 4em 0
+
+		p
+			line-height: 1.4em
+			font-size: 1em
+
+	#posts-list
+		li.post-list-item
+			padding: 1em 0.5em
+
+			.post-list-title
+				font-size: 0.8em
+				margin-left: 0
+
+			.post-list-date
+				display: none
+
