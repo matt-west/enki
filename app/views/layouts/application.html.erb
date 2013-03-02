@@ -36,19 +36,19 @@
       <nav>
         <ul>
           <li>
-            <a href="/" <%= controller_name == "posts" && action_name == "index" && @tag == nil ? "class='current'" : "" %>>Latest</a>
+            <a href="/" <%= controller_name == "posts" && action_name == "index" && @tag == nil ? "class=current" : "" %>>Latest</a>
           </li>
           <li>
-            <a href="/archives" <%= controller_name == "archives" ? "class='current'" : "" %>>Archives</a>
+            <a href="/archives" <%= controller_name == "archives" ? "class=current" : "" %>>Archives</a>
           </li>
           <li>
-            <a href="/pages/books" <%= params[:id] == "books" ? "class='current'" : "" %>>Books</a>
+            <a href="/pages/books" <%= params[:id] == "books" ? "class=current" : "" %>>Books</a>
           </li>
           <li>
-            <a href="/pages/goals" <%= params[:id] == "goals" ? "class='current'" : "" %>>Goals</a>
+            <a href="/pages/goals" <%= params[:id] == "goals" ? "class=current" : "" %>>Goals</a>
           </li>
           <li>
-            <a href="/pages/about" <%= params[:id] == "about" ? "class='current'" : "" %>>About</a>
+            <a href="/pages/about" <%= params[:id] == "about" ? "class=current" : "" %>>About</a>
           </li>
         </ul>
       </nav>
