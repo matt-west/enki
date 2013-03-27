@@ -10,9 +10,9 @@ default_run_options[:pty] = true
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 # Load RVM's capistrano plugin.    
-require "rvm/capistrano"
+# require "rvm/capistrano"
 
-set :rvm_ruby_string, '1.9.2'
+set :rvm_ruby_string, '1.9.2-p320@enki'
 set :rvm_type, :system
 
 set :repository, "git@github.com:matt-west/enki.git"
