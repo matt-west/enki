@@ -24,7 +24,7 @@ module ApplicationHelper
     elsif @months
       'Articles from times gone by'
     else
-      'Thoughts on the business, technology and life by <a href="/pages/about" title="About Matt West">Matt West</a>'
+      'Thoughts on business, technology and life by <a href="/pages/about" title="About Matt West">Matt West</a>'
     end
   end
 

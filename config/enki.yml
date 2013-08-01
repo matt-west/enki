@@ -6,4 +6,5 @@ author:
   name:    Matt West        # For copyright notice and ATOM feeds
   email:   matt.west@kojilabs.com # Exception emails will go here, and it is used in ATOM feeds
   open_id:                  # These are used to login to the admin area
-      - http://mattantwest.myopenid.com/
+      - https://plus.google.com/103780700566333678292/posts
+      - https://profiles.google.com/103780700566333678292

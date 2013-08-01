@@ -1,5 +1,21 @@
 <div id="post">
+
 	<div id="post-content">
+		<% if post.image %>
+		<figure id="post-image">
+			<%= image_tag post.image, :alt => post.title %>
+			<% if post.image_src %>
+				<figcaption>
+					<% if post.image_src_name %>
+						Image Source: <%= link_to post.image_src_name, post.image_src %>
+					<% else %>
+						Image Source: <%= link_to post.image_src, post.image_src %>
+					<% end %>
+				</figcaption>
+			<% end %>
+		</figure>
+		<% end %>
+
 		<%=raw post.body_html %>
 	</div>
 
