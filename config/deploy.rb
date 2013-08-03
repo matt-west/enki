@@ -10,10 +10,12 @@ default_run_options[:pty] = true
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
 # Load RVM's capistrano plugin.    
-# require "rvm/capistrano"
+require "rvm/capistrano"
+require "airbrake/capistrano"
 
 set :rvm_ruby_string, '1.9.2-p320@enki'
 set :rvm_type, :system
+set :rvm_path, '/usr/local/rvm'
 
 set :repository, "git@github.com:matt-west/enki.git"
 set :deploy_to, "/var/www/vhosts/cs"
@@ -27,6 +29,7 @@ set :scm, :git
 set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
+set :keep_releases, 5
 
 namespace :deploy do
 	desc "cause Passenger to initate restart"
