@@ -4,7 +4,7 @@
 <% end -%>
 
 <ul id="posts-list">
-	<% @posts.each do |post| -%>
+	<% @posts.each_with_index do |post, i| -%>
 		<li class="post-list-item clearfix">
 			<div class="post-list-date">
 				<div class="pld-day"><%= post.published_at.day %></div>
@@ -13,6 +13,11 @@
 			<div class="post-list-title">
 				<h2><%= link_to post.title, post_path(post) %></h2>
 			</div>
+			<% if i == 0 && post.image %>
+			<div class="post-image">
+				<%= link_to (image_tag post.image, :alt => post.title), post_path(post) %>
+			</div>
+			<% end %>
 		</li>
 	<% end -%>
 
